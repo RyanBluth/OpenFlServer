@@ -1,0 +1,2 @@
+ -DHXCPP_ARMV7="1" -Dactuate="1" -Dandroid="1" -Dandroid-9="1" -Dandroid_9="1" -Dhaxe3="1" -Dhaxe_ver="3.103" -Dhxcpp="1" -Dhxcpp_api_level="311" -Dlime_native="1" -Dmobile="1" -Dno-compilation="1" -Dno_compilation="1" -Dopenfl="1" -Dopenfl-native="1" -Dopenfl_native="1" -Dtools="1.4.0"
+C:\Users\Ryan Bluth\haxe/hxcpp/3,1,37/
