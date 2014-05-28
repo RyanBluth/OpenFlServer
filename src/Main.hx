@@ -4,6 +4,14 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.Lib;
 
+#if neko
+import neko.vm.Thread;
+#end
+#if cpp
+import cpp.vm.Thread;
+#end
+
+
 /**
  * ...
  * @author Ryan
@@ -26,8 +34,9 @@ class Main extends Sprite
 		if (inited) return;
 		inited = true;
 
-		//var server = new Server();
-		var client = new Client();
+		var server:Server = new Server();
+		Thread.create(server.runServer);
+		//var client = new Client();
 		// (your code here)
 		
 		// Stage:

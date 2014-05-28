@@ -2,6 +2,13 @@ package ;
 import haxe.Timer;
 import sys.net.Address;
 import sys.net.Socket;
+#if cpp
+import cpp.vm.Thread;
+#end
+#if neko
+import
+neko.vm.Thread;
+#end
 
 /**
  * ...
@@ -30,8 +37,9 @@ class Client
 	
 	private function tryConnect() {	
 		try {
-			s.connect(new sys.net.Host("198.84.223.47"), 2000);
+			s.connect(new sys.net.Host("192.168.0.100"), 5552);
 			connected = true;
+			Thread.create(connectedToServer);
 		}catch (exception:Dynamic){
 			trace("Could not connect to server");
 		}
